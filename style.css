@@ -1,0 +1,451 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+button{
+    outline: none;
+    border: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+:root{
+    --green : #81b541;
+    --blue : #12cec5;
+}
+
+html,body{
+    margin: 0px;
+    padding: 0px;
+    width:100% !important;
+    height: 100vh !important;
+    background-image: url("./images/newspaper.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden !important;
+    overflow-y: hidden !important;
+}
+
+.mobile-nav{
+    width:250px;
+    height: 70vh;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    background-color: rgba(188, 181, 181, 0.889);
+    display: none ;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 1px 1px 0px 50px ;
+    animation-name: anime;
+    animation-duration: 0.5s;
+}
+
+@keyframes anime{
+    from{width:0px}
+    to {width: 250px;}
+}
+
+.mobile-nav-hide{
+    animation-name: anime2;
+    animation-duration: 0.5s;
+}
+
+@keyframes anime2{
+    from{
+        width:250px;
+    }
+    to{
+        width: 0px;
+    }
+}
+
+.mobile-nav-active{
+    display: flex;
+}
+
+.nav-item:hover{
+    color: var(--blue);
+}
+
+
+
+.flex{
+    display: flex;
+}
+
+
+
+.mobile-web-links{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.mobile-web-links .top{
+    margin-top: 5px;
+    flex: 5;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-web-links .top li a{
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+.mobile-web-links .top li {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.mobile-social-Links{
+    border-top: 2px solid black;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center ;
+}
+
+.mobile-social-Links .nav-item{
+   margin-bottom: 15px;
+}
+
+.nav-item a:hover{
+    color: var(--blue) !important;
+}
+.nav-item a i:hover{
+    color: var(--blue) !important;
+}
+
+
+.nav-item a i{
+    font-size: 1.2rem;
+}
+
+.mobile-nav #close{
+    position: absolute;
+    top:40%;
+    width: 30px;
+    height: 30px;
+
+    border-radius: 1px 50px 50px 1px;
+    background-color: purple;
+    padding: 4px;
+}
+
+.mobile-nav #close:hover{
+    cursor: pointer;
+}
+
+.mobile-nav #close:active{
+    width: 20px;
+   
+}
+
+/* nav */
+
+.top-header{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex: 0.6;
+}
+
+
+
+.top-header .nav{
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+.nav-item a {
+    color: white;
+    font-size: 1rem;
+}
+
+
+
+.nav .web-links{
+    flex: 4;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+.nav-item a {
+    position: absolute;
+}
+
+.web-links .nav-item a:hover{
+    color:var(--blue);
+   
+}
+
+
+.nav-item a{
+    font-weight: bold;
+}
+
+.socialLinks{
+    display: flex;
+    width: 100px;
+    justify-content: space-around;
+    margin-left: 10px;
+    flex-wrap: wrap;
+
+}
+.socialLinks .nav-item a i:hover{
+    color: var(--blue);
+}
+
+.nav .title{
+    position: absolute;
+    text-align: left;
+    flex: 2;
+    position: relative;
+    left: 5%;    
+    font-size: 3rem;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+/* HOME STYLE */
+
+/* .home {
+    display: flex !important;
+    justify-content: center;
+    flex-direction: column;
+    flex: 3;
+}
+
+.home .home-content{
+    margin-left: 5%;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.home-content .about-US{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.home-content .about-US h4 {
+    margin: 15px 0px;
+}
+
+.home-content .about-US span{
+    font-size: 2.4rem;
+    font-weight: bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.home-content .home-content-btn{
+    display: flex;
+    flex-direction: row;
+    width: 410px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex: 0.8;
+    
+}
+
+.home-content .home-content-btn button{
+ 
+    width: 48%;
+    height: 50px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: bold;
+} */
+
+
+.mainContent{
+    margin-left: 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainContent .about-US{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainContent .about-US h4 {
+    margin: 15px 0px;
+}
+
+.mainContent .about-US span{
+    font-size: 3rem;
+    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.home-content-btn{
+    margin-left: 4%;
+    flex: 1;
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px !important;
+}
+
+
+.home-content-btn button{
+    width: 48%;
+    height: 50px;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    font-weight: bold;
+} 
+
+
+
+#read-more,#buy-online:hover{
+    cursor: pointer;
+	background-color:black;
+}
+
+#read-more:hover{
+	background-color:black;
+}
+
+#read-more:active{
+	margin-top:1px;
+}
+
+#buy-online:active{
+	margin-top:1px;
+}
+
+
+
+#read-more{
+    background-color:var(--green);
+}
+
+#buy-online{
+    background-color: var(--blue);
+}
+
+
+
+/* hamberger button  -- small screen nav*/
+
+.hambergerBTN{
+    display: none;
+    width: 40px;
+    height: 40px;    
+}
+
+
+.hambergerBTN {
+    background-color: transparent;
+    height: 50%;
+}
+
+
+.hambergerBTN i:hover {
+    color: var(--green);
+    cursor: pointer;
+}
+
+
+.hambergerBTN  i{
+    font-size: 2.4rem;
+}
+
+
+
+/* responsive */
+@media screen and (max-width:951px){
+    .nav .web-links{
+        display: none;
+    }
+
+    .hambergerBTN{
+        display: block;
+    }
+    .title{
+        flex: 1;
+    }
+
+    .hambergerBTN{
+        flex: 1;
+    }
+}
+
+@media screen and (min-width:952px){
+    .mobile-nav{
+        display: none !important ;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .home-content-btn{
+       flex-direction: column;
+       align-items: flex-start;
+       justify-content: center;
+    }
+
+    .home-content-btn button{
+        width: 40% !important;
+        margin-bottom: 4px;
+    }
+
+    #buy-online{
+        margin-top: 2px;
+    }
+   
+}
